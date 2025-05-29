@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla Landing Page</title>
+    <link rel="stylesheet" href="/src/vanilla/styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/scroll-hint@latest/css/scroll-hint.css" />
+  </head>
+  <body>
+    <header class="l-header">
+      <a href="/" class="c-logo">
+        <picture>
+          <source srcset="/src/assets/images/logo-large.jpg" media="(min-width: 1440px)" />
+          <img
+            src="/src/assets/images/logo-small.jpg"
+            alt="tcb-logo"
+            class="c-logo__img"
+            width="150"
+            height="auto"
+          />
+        </picture>
+      </a>
+
+      <div class="c-hamburger">
+        <div class="c-hamburger__line"></div>
+        <div class="c-hamburger__line"></div>
+        <div class="c-hamburger__line"></div>
+      </div>
+
+      <aside class="c-nav-mobile">
+        <nav class="c-nav-mobile__nav">
+          <ul class="c-nav-mobile__list"></ul>
+        </nav>
+      </aside>
+
+      <nav class="c-nav-desktop">
+        <ul class="c-nav-desktop__list"></ul>
+      </nav>
+
+      <a href="/reservation" class="c-reservation">
+        <div class="c-reservation__content">
+          <img
+            src="/src/assets/images/reservation-icon-small.svg"
+            alt="reservation-icon"
+            class="c-reservation__icon"
+          />
+          <span class="c-reservation__text">WEB 予約</span>
+        </div>
+      </a>
+    </header>
+
+    <main class="l-main">
+      <section class="c-hero">
+        <picture class="c-hero__image">
+          <source srcset="/src/assets/images/hero-large.jpg" media="(min-width: 768px)" />
+          <img
+            src="/src/assets/images/hero-small.jpg"
+            alt="hero-image-small"
+            width="375"
+            height="400"
+            class="c-hero__img"
+          />
+        </picture>
+
+        <div class="c-hero__text-container">
+          <h1 class="c-hero__title">美容医療はファッションへ</h1>
+        </div>
+      </section>
+
+      <section class="c-philosophy">
+        <picture class="c-philosophy__text-image">
+          <source srcset="/src/assets/images/text-side-small.png" media="(min-width: 768px)" />
+          <img
+            src="/src/assets/images/text-small.png"
+            alt="philosophy-text-image"
+            width="300"
+            height="50"
+            loading="lazy"
+          />
+        </picture>
+        <div class="c-philosophy__text-container">
+          <p class="c-philosophy__text">
+            「美容医療」という言葉を耳にして、モデルや芸能人が受ける「特別なもの」というイメージを抱いていませんか？
+            <br />
+            「キレイになりたい」という願いは、誰もが抱く自然なもの。
+            <br />
+            ですから、美容医療の力を使って美しさに磨きをかけることは、決して特別なことではないのです。
+            <br />
+            東京中央美容外科（TCB）は、医師が患者様の「キレイになりたい」という願いに真摯に寄り添い、懇切丁寧なカウンセリングはもちろんのこと、一人ひとりに合った最適な治療法をご提案いたします。
+            <br />
+            理想の自分になりたい、コンプレックスを解消したい、過去の美しさを取り戻したいと思った方は、ぜひTCBにご相談ください。
+          </p>
+        </div>
+        <picture class="c-philosophy__main-image">
+          <source
+            srcset="/src/assets/images/philosophy-image-large.jpg"
+            media="(min-width: 1440px)"
+          />
+          <source
+            srcset="/src/assets/images/philosophy-image-small.jpg"
+            media="(min-width: 768px)"
+          />
+          <img
+            src="/src/assets/images/philosophy-image-small.jpg"
+            alt="philosophy-main-image"
+            width="450"
+            height="600"
+            loading="lazy"
+          />
+        </picture>
+        <picture class="c-philosophy__tcb-logo">
+          <source srcset="/src/assets/images/tcb-text-logo-large.png" media="(min-width: 1440px)" />
+          <img
+            src="/src/assets/images/tcb-text-logo-small.png"
+            alt="tcb-image-text"
+            width="300"
+            height="102"
+            loading="lazy"
+          />
+        </picture>
+      </section>
+
+      <section class="c-strength">
+        <div class="c-strength__bg-wrapper">
+          <img
+            src="/src/assets/images/philosophy-bg-large.jpg"
+            alt="strength-background"
+            width="1300"
+            height="800"
+            loading="lazy"
+          />
+        </div>
+        <div class="c-strength__text-container">
+          <h2>TCBの強み</h2>
+          <h3>Value</h3>
+        </div>
+        <div class="c-strength__card-container"></div>
+      </section>
+
+      <section class="c-banner">
+        <picture class="c-banner__image">
+          <source srcset="/src/assets/images/banner-full-w-small.jpg" media="(min-width: 768px)" />
+          <img
+            src="/src/assets/images/banner-small.jpg"
+            alt="banner-image"
+            width="375"
+            height="600"
+            loading="lazy"
+          />
+        </picture>
+      </section>
+
+      <section class="c-testimonial">
+        <div class="c-testimonial__card-container"></div>
+      </section>
+
+      <section class="c-price">
+        <div class="c-price__text-container">
+          <h2>料金</h2>
+          <h3>Price</h3>
+        </div>
+        <div class="c-price__container"></div>
+      </section>
+    </main>
+
+    <footer class="l-footer">
+      <p>Copyright © TCB All Rights Reserved.</p>
+    </footer>
+
+    <script type="module" src="/src/vanilla/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+:root {
+  --font-family-ym: 'Yu Mincho', serif;
+  --font-family-yg: 'Yu Gothic', sans-serif;
+
+  --color-white: #ffffff;
+  --color-light: #f9f9f9;
+  --color-black: #000000;
+  --color-gray-light: #c1c1c1;
+  --color-gray: #8e8e8e;
+  --color-blue: #395ff8;
+  --color-red: #ff0000;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    '游明朝', 'Yu Mincho', '游明朝体', 'YuMincho', 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro',
+    'HiraMinProN-W3', 'HGS明朝E', 'ＭＳ Ｐ明朝', 'MS PMincho', serif;
+  background-color: var(--color-white);
+  color: #333;
+  line-height: 1.6;
+}
+
+html {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+html,
+body {
+  max-width: 100vw;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, textarea, select {
+  font: inherit;
+}

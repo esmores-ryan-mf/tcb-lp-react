@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+  <g id="グループ_370" data-name="グループ 370" transform="translate(-1533.68 -255.18)">
+    <rect id="長方形_168" data-name="長方形 168" width="25.359" height="24.359" transform="translate(1535 258)"/>
+    <g id="calendar" transform="translate(1533.68 255.18)">
+      <path id="パス_36" data-name="パス 36" d="M29.25,4.25h-3v-2h-2v2h-16v-2h-2v2h-3l-1,1v24l1,1h26l1-1v-24Zm-1,24h-24v-18h24Zm0-20h-24v-2h24Zm-20,8h-2v2h2Zm-2,4h2v2h-2Zm2,4h-2v2h2Zm4-8h2v2h-2Zm2,4h-2v2h2Zm-2,4h2v2h-2Zm2-12h-2v2h2Zm4,4h2v2h-2Zm2,4h-2v2h2Zm-2,4h2v2h-2Zm2-12h-2v2h2Zm4,4h2v2h-2Zm2,4h-2v2h2Zm-2-8h2v2h-2Z" transform="translate(-2.25 -2.25)" fill="#fff" fill-rule="evenodd"/>
+    </g>
+  </g>
+</svg>
