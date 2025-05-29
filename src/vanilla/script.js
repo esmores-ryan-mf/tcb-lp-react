@@ -1,3 +1,4 @@
+// Import navigation data
 import { data } from '../constants/links.js';
 import strengthsData from '../constants/strengthDb.js';
 import testimonialData from '../constants/testimonialDb.js';
@@ -6,7 +7,6 @@ import ScrollHint from 'scroll-hint';
 
 document.addEventListener('DOMContentLoaded', function () {
   console.log('js is running');
-
   const hamburger = document.querySelector('.c-hamburger');
   const navMobile = document.querySelector('.c-nav-mobile');
   const mobileNavList = document.querySelector('.c-nav-mobile__list');
@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const priceTableContainer = document.querySelector('.c-price__container');
   const body = document.body;
 
-  // Icons
   const chevronIconHTML =
     '<svg class="c-nav-mobile__icon" viewBox="0 0 24 24" width="16" height="16"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>';
   const submenuChevronHTML =
@@ -26,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const circleMinusIconHTML =
     '<svg class="c-price__icon" viewBox="0 0 24 24" width="24" height="24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1" fill="none"/><path d="M8 12h8" stroke="currentColor" stroke-width="1"/></svg>';
 
-  // Generate Mobile Navigation
   function generateMobileNav() {
     data.forEach((item) => {
       const li = document.createElement('li');
@@ -46,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Generate Desktop Navigation
   function generateDesktopNav() {
     data.forEach((item) => {
       const li = document.createElement('li');
@@ -95,7 +92,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Generate Strength Card
   function generateStrengthCard() {
     strengthsData.forEach((item) => {
       const cardContainer = document.createElement('article');
@@ -150,7 +146,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Generate Testimonial Card
   function generateTestimonialCard() {
     testimonialData.forEach((item) => {
       const cardContainer = document.createElement('article');
@@ -188,7 +183,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Generate Price Table
   function generatePriceTable() {
     const priceTable = document.createElement('article');
 
@@ -244,11 +238,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // Toggle mobile navigation
   function toggleState(className) {
     if (className === 'c-hamburger') {
       const isOpen = hamburger.classList.contains(`${className}--open`);
       if (!isOpen) {
-        console.log('close');
         // Open menu
         hamburger.classList.add(`${className}--open`);
         navMobile.classList.add('c-nav-mobile--open');
@@ -261,8 +255,9 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     } else if (className === 'c-price__scroll-container') {
       const scrollableContainer = document.querySelector('.c-price__scroll-container');
-      const nameContainerElement = document.querySelector('.c-price__name-container');
+      const nameContainerElement = document.querySelector('.c-price__name-container'); // Cache the name container element
 
+      // Determine current state based on scrollableContainer, as per original logic
       const isOpen = scrollableContainer.classList.contains('c-price__scroll-container--open');
 
       if (!isOpen) {
@@ -300,4 +295,16 @@ document.addEventListener('DOMContentLoaded', function () {
   generateStrengthCard();
   generateTestimonialCard();
   generatePriceTable();
+
+  new ScrollHint('.js-scrollable', {
+    suggestiveShadow: true,
+    i18n: {
+      scrollable: 'スクロールできます',
+    },
+  });
 });
+
+// Hot reload support for development
+if (import.meta.hot) {
+  import.meta.hot.accept();
+}

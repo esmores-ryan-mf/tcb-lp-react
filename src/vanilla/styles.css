@@ -910,11 +910,9 @@ select {
 .c-price__scroll-container {
   height: 0;
   overflow: scroll;
-  display: none;
 }
 
 .c-price__scroll-container--open {
-  display: block;
   height: max-content;
 }
 
